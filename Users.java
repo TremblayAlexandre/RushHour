@@ -8,7 +8,7 @@ public class Users {
     private int points;
     private static int count =0;
     public static ArrayList<Users> users= new ArrayList(count);
-
+    static String path = "\\C:\\Users\\tremb\\Desktop\\Users\\";
     public Users(String username, String password) {
         this.username = username;
         this.password = password;
@@ -16,7 +16,7 @@ public class Users {
         this.level = 1;
         count++;
         try {
-            UserCreator.createFiles(username,username,password,12,12);
+            UserCreator.createFiles(username,password);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
